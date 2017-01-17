@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="sV0-ex-0op">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RUKAnimatedScreenShare" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,67 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oDY-XS-1VN" customClass="RUKShareView" customModule="RUKAnimatedScreenShare" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="feed" translatesAutoresizingMaskIntoConstraints="NO" id="sne-ZP-vXX">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="sne-ZP-vXX" secondAttribute="bottom" id="3u7-1S-atO"/>
+                                    <constraint firstItem="sne-ZP-vXX" firstAttribute="leading" secondItem="oDY-XS-1VN" secondAttribute="leading" id="DIU-q3-xPB"/>
+                                    <constraint firstItem="sne-ZP-vXX" firstAttribute="top" secondItem="oDY-XS-1VN" secondAttribute="top" id="Fpt-dZ-lEa"/>
+                                    <constraint firstAttribute="trailing" secondItem="sne-ZP-vXX" secondAttribute="trailing" id="HAX-HT-mev"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.7725490196" green="0.7725490196" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="oDY-XS-1VN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="MJL-cb-PrW"/>
+                            <constraint firstItem="oDY-XS-1VN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ZUf-hj-VSG"/>
+                            <constraint firstAttribute="trailing" secondItem="oDY-XS-1VN" secondAttribute="trailing" id="mme-tu-OWi"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="oDY-XS-1VN" secondAttribute="bottom" id="xXH-gC-p0G"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="9dR-Bl-Xo6">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="8Ey-IM-hHP">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="share:" destination="BYZ-38-t0r" id="UBQ-ag-ARE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="feedview" destination="oDY-XS-1VN" id="kiY-Mv-Q4V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1076" y="128.18590704647679"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="D6g-tV-nl7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sV0-ex-0op" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="8E5-Oo-x8L">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Eea-NB-7rI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MUg-FV-2zb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="782.15892053973016"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="feed" width="525" height="815"/>
+    </resources>
 </document>

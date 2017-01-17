@@ -14,6 +14,12 @@
 		4C1DA58B1E28BB7700724CC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C1DA5891E28BB7700724CC2 /* LaunchScreen.storyboard */; };
 		4C1DA5961E28BB7700724CC2 /* RUKAnimatedScreenShareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1DA5951E28BB7700724CC2 /* RUKAnimatedScreenShareTests.swift */; };
 		4C1DA5A11E28BB7700724CC2 /* RUKAnimatedScreenShareUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1DA5A01E28BB7700724CC2 /* RUKAnimatedScreenShareUITests.swift */; };
+		4CE9A3A41E2DE67E005E6F37 /* RUKShareSubMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE9A3A21E2DE67E005E6F37 /* RUKShareSubMenu.swift */; };
+		4CE9A3A51E2DE67E005E6F37 /* RUKShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE9A3A31E2DE67E005E6F37 /* RUKShareView.swift */; };
+		4CE9A3A71E2DE688005E6F37 /* RUKAnimationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE9A3A61E2DE688005E6F37 /* RUKAnimationProtocol.swift */; };
+		4CE9A3AA1E2DE697005E6F37 /* CollectionViewOutputProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE9A3A81E2DE697005E6F37 /* CollectionViewOutputProtocol.swift */; };
+		4CE9A3AB1E2DE697005E6F37 /* SharingViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE9A3A91E2DE697005E6F37 /* SharingViewCell.swift */; };
+		4CE9A3AD1E2DE6D7005E6F37 /* SharingViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CE9A3AC1E2DE6D7005E6F37 /* SharingViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +53,12 @@
 		4C1DA59C1E28BB7700724CC2 /* RUKAnimatedScreenShareUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RUKAnimatedScreenShareUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C1DA5A01E28BB7700724CC2 /* RUKAnimatedScreenShareUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RUKAnimatedScreenShareUITests.swift; sourceTree = "<group>"; };
 		4C1DA5A21E28BB7700724CC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CE9A3A21E2DE67E005E6F37 /* RUKShareSubMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RUKShareSubMenu.swift; path = RUKShareView/RUKShareSubMenu.swift; sourceTree = "<group>"; };
+		4CE9A3A31E2DE67E005E6F37 /* RUKShareView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RUKShareView.swift; path = RUKShareView/RUKShareView.swift; sourceTree = "<group>"; };
+		4CE9A3A61E2DE688005E6F37 /* RUKAnimationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RUKAnimationProtocol.swift; path = RUKShareView/RUKAnimationProtocol.swift; sourceTree = "<group>"; };
+		4CE9A3A81E2DE697005E6F37 /* CollectionViewOutputProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollectionViewOutputProtocol.swift; path = RUKShareView/CollectionViewOutputProtocol.swift; sourceTree = "<group>"; };
+		4CE9A3A91E2DE697005E6F37 /* SharingViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SharingViewCell.swift; path = RUKShareView/SharingViewCell.swift; sourceTree = "<group>"; };
+		4CE9A3AC1E2DE6D7005E6F37 /* SharingViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SharingViewCell.xib; path = RUKShareView/SharingViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +115,7 @@
 				4C1DA5871E28BB7700724CC2 /* Assets.xcassets */,
 				4C1DA5891E28BB7700724CC2 /* LaunchScreen.storyboard */,
 				4C1DA58C1E28BB7700724CC2 /* Info.plist */,
+				4CF46F291E2CE66B00B237ED /* RUKSharingView */,
 			);
 			path = RUKAnimatedScreenShare;
 			sourceTree = "<group>";
@@ -123,6 +136,35 @@
 				4C1DA5A21E28BB7700724CC2 /* Info.plist */,
 			);
 			path = RUKAnimatedScreenShareUITests;
+			sourceTree = "<group>";
+		};
+		4CF46F291E2CE66B00B237ED /* RUKSharingView */ = {
+			isa = PBXGroup;
+			children = (
+				4CE9A3A21E2DE67E005E6F37 /* RUKShareSubMenu.swift */,
+				4CE9A3A31E2DE67E005E6F37 /* RUKShareView.swift */,
+				4CF46F2A1E2CE68A00B237ED /* Protocol */,
+				4CF46F2B1E2CE69500B237ED /* LayoutForMenu */,
+			);
+			name = RUKSharingView;
+			sourceTree = "<group>";
+		};
+		4CF46F2A1E2CE68A00B237ED /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				4CE9A3A61E2DE688005E6F37 /* RUKAnimationProtocol.swift */,
+			);
+			name = Protocol;
+			sourceTree = "<group>";
+		};
+		4CF46F2B1E2CE69500B237ED /* LayoutForMenu */ = {
+			isa = PBXGroup;
+			children = (
+				4CE9A3A81E2DE697005E6F37 /* CollectionViewOutputProtocol.swift */,
+				4CE9A3A91E2DE697005E6F37 /* SharingViewCell.swift */,
+				4CE9A3AC1E2DE6D7005E6F37 /* SharingViewCell.xib */,
+			);
+			name = LayoutForMenu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +279,7 @@
 			files = (
 				4C1DA58B1E28BB7700724CC2 /* LaunchScreen.storyboard in Resources */,
 				4C1DA5881E28BB7700724CC2 /* Assets.xcassets in Resources */,
+				4CE9A3AD1E2DE6D7005E6F37 /* SharingViewCell.xib in Resources */,
 				4C1DA5861E28BB7700724CC2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,7 +306,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C1DA5831E28BB7700724CC2 /* ViewController.swift in Sources */,
+				4CE9A3A71E2DE688005E6F37 /* RUKAnimationProtocol.swift in Sources */,
+				4CE9A3AA1E2DE697005E6F37 /* CollectionViewOutputProtocol.swift in Sources */,
+				4CE9A3AB1E2DE697005E6F37 /* SharingViewCell.swift in Sources */,
+				4CE9A3A41E2DE67E005E6F37 /* RUKShareSubMenu.swift in Sources */,
 				4C1DA5811E28BB7700724CC2 /* AppDelegate.swift in Sources */,
+				4CE9A3A51E2DE67E005E6F37 /* RUKShareView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,6 +562,7 @@
 				4C1DA5A71E28BB7700724CC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4C1DA5A81E28BB7700724CC2 /* Build configuration list for PBXNativeTarget "RUKAnimatedScreenShareTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +571,7 @@
 				4C1DA5AA1E28BB7700724CC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4C1DA5AB1E28BB7700724CC2 /* Build configuration list for PBXNativeTarget "RUKAnimatedScreenShareUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +580,7 @@
 				4C1DA5AD1E28BB7700724CC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
